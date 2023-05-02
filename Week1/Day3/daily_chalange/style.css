@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    border: 0.5rem solid black;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+}
+.square{
+    border: 0.2rem solid black;
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
