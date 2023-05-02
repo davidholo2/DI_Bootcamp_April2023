@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  nav {
+    background-color: #333;
+    color: white;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px;
+  }
+  nav a:hover {
+    color: red;
+  }
+  
+  
+  header {
+    background-image: url("images/Avengers_Assemble.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 60px;
+    text-shadow: 3px 3px #333;
+  }
+  
+  p {
+    font-size: 30px;
+    margin-top: 20px;
+    text-shadow: 2px 2px #333;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    margin-bottom: 50px; /* add margin to prevent overlap with footer */
+  }
+  
+  
+  section {
+    flex-basis: 30%;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  @media only screen and (max-width: 768px) {
+    header {
+      height: 300px;
+    }
+  
+    h1 {
+      font-size: 40px;
+    }
+  
+    p {
+      font-size: 20px;
+    }
+  
+    main {
+      padding: 20px;
+    }
+  
+    section {
+      flex-basis: 100%;
+      margin: 20px 0;
+    }
+  }
+  
