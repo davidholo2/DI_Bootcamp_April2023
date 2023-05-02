@@ -1,0 +1,31 @@
+
+.orange
+{
+    background-color: orangered;
+    border: 0.01rem solid black;
+    height: 10px;
+    width: 10px;
+}
+.light{
+    background-color:lightcoral;
+    border: 0.01rem solid black;
+    height: 10px;
+    width: 10px;
+}
+.red{
+    background-color:red;
+    border: 0.01rem solid black;
+    height: 10px;
+    width: 10px;
+}
+.gridy{
+    display: grid;
+    grid-template-columns: repeat(16 ,1fr);
+    grid-template-rows: repeat(16 ,1fr);
+    border: 0.1rem solid black;
+    padding: 1px;
+
+    height: 235px;
+    width: 235px;
+
+}
