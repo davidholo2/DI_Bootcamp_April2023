@@ -1,67 +1,102 @@
 /* Default styles for navbar */
 nav {
-    background-color: #1E1E1E;
-    padding: 20px 0;
-    font-family: 'Courier New', Courier, monospace;
-  }
-  
+  background-color: #1E1E1E;
+  padding: 20px 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  color: #FFF;
+  font-size: 24px;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  display: inline-block;
+  margin-left: 20px;
+  position: relative;
+}
+
+li:before {
+  content: attr(data-number);
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  top: -25px;
+  left: 0;
+}
+
+a {
+  color: #FFF;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  display: block;
+}
+
+a:hover {
+  background-color: #FFF;
+  color: #1E1E1E;
+}
+
+/* Styles for smaller screens */
+@media (max-width: 768px) {
   .container {
-    max-width: 960px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  h1 {
-    color: #FFF;
-    font-size: 24px;
-    margin: 0;
+    flex-direction: column;
+    align-items: flex-start;
   }
   
   ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #1E1E1E;
   }
   
   li {
-    display: inline-block;
-    margin-left: 20px;
-    position: relative;
-  }
-  
-  a {
-    color: #FFF;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px;
-    border-radius: 3px;
-    transition: all 0.2s ease;
     display: block;
+    margin: 10px 0;
   }
   
-  a:hover {
-    background-color: #FFF;
-    color: #1E1E1E;
+  li:before {
+    position: static;
+    display: none;
   }
   
-  /* Styles for smaller screens */
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    
-    li {
-      display: block;
-      margin: 10px 0;
-    }
-    
-    li:before {
-      position: static;
-      display: none;
-    }
+  .icon {
+    color: #FFF;
+    font-size: 30px;
+    cursor: pointer;
   }
   
+  .icon:hover {
+    color: #CCC;
+  }
   
+  /* Show the links when the hamburger icon is clicked */
+  #navbar-toggle:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
