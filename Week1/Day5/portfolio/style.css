@@ -1,102 +1,191 @@
-/* Default styles for navbar */
-nav {
-  background-color: #1E1E1E;
-  padding: 20px 0;
-  font-family: 'Courier New', Courier, monospace;
+/* Global styles */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
 }
 
-h1 {
-  color: #FFF;
-  font-size: 24px;
-  margin: 0;
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	background-color: #f0f0f0;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+nav img {
+	height: 30px;
+	margin-left: 20px;
 }
 
-li {
-  display: inline-block;
-  margin-left: 20px;
-  position: relative;
+nav img:first-child {
+	margin-left: 0;
 }
 
-li:before {
-  content: attr(data-number);
-  display: block;
-  font-size: 16px;
-  font-weight: bold;
-  position: absolute;
-  top: -25px;
-  left: 0;
+nav a {
+	display: inline-block;
 }
 
-a {
-  color: #FFF;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 10px;
-  border-radius: 3px;
-  transition: all 0.2s ease;
-  display: block;
+nav a:not(:last-child) {
+	margin-right: 10px;
 }
 
-a:hover {
-  background-color: #FFF;
-  color: #1E1E1E;
+main {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 50px;
 }
 
-/* Styles for smaller screens */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  ul {
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background-color: #1E1E1E;
-  }
-  
-  li {
-    display: block;
-    margin: 10px 0;
-  }
-  
-  li:before {
-    position: static;
-    display: none;
-  }
-  
-  .icon {
-    color: #FFF;
-    font-size: 30px;
-    cursor: pointer;
-  }
-  
-  .icon:hover {
-    color: #CCC;
-  }
-  
-  /* Show the links when the hamburger icon is clicked */
-  #navbar-toggle:checked ~ ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+section {
+	margin-bottom: 40px;
+}
+
+h1, h2, button {
+	font-weight: bold;
+}
+
+button {
+	background-color: #4caf50;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: #388e3c;
+}
+
+/* Profile section */
+
+.profile {
+	display: flex;
+	align-items: center;
+}
+
+.profile img {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	margin-right: 40px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.profile h1 {
+	font-size: 36px;
+	margin-bottom: 10px;
+}
+
+.profile p {
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+/* Skills section */
+
+.skills ul {
+	list-style: none;
+}
+
+.skills li {
+	margin-bottom: 10px;
+}
+
+/* Education section */
+
+.education ul {
+	list-style: none;
+}
+
+.education li {
+	margin-bottom: 10px;
+}
+
+/* Projects section */
+
+.projects ul {
+	list-style: none;
+}
+
+.projects li {
+	margin-bottom: 10px;
+}
+
+.projects a {
+	color: #4caf50;
+	transition: color 0.3s ease;
+}
+
+.projects a:hover {
+	color: #388e3c;
+}
+
+/* Contact section */
+
+.contact label, .contact input, .contact textarea {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.contact input, .contact textarea {
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+
+.contact textarea {
+	resize: vertical;
+	height: 100px;
+}
+
+.contact button {
+	margin-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+	header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	nav img {
+		margin: 10px 0;
+	}
+
+	nav a:not(:last-child) {
+		margin-right: 20px;
+	}
+
+	main {
+		padding: 20px;
+	}
+
+	.profile {
+		flex-direction: column;
+		align-items: flex-start;
+		text-align: center;
+	}
+
+	.profile img {
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+
+	.skills li, .education li, .projects li {
+		font-size: 14px;
+	}
+
+	.contact label, .contact input, .contact textarea {
+		width: 100%;
+	}
 }

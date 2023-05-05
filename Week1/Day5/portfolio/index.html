@@ -4,54 +4,63 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>My Portfolio</title>
-	<!-- Include CSS stylesheets here -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" integrity="sha512-w/8rU10stIrg68X6QQN/RBAsiN/ZHsF6cucNNsLl0+P59oLd/AqK1P5h/fC5ZYUHk6UfscmJ1dy6F/Sy6/lKw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
- 
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<!-- Header section -->
-    <header>
-        <nav>
-            <div class="container">
-              <h1>My Website</h1>
-			  <input type="checkbox" id="navbar-toggle">
-			  <label for="navbar-toggle" class="icon">&#9776;</label>
-              <ul>
-                <li data-number="01"><a href="#">/Home</a></li>
-                <li data-number="02"><a href="#">/About</a></li>
-                <li data-number="03"><a href="#">/Portfolio</a></li>
-                <li data-number="04"><a href="#">/Contact</a></li>
-              </ul>
-            </div>
-          </nav>
-          
-          
-      </header><!-- header role="banner" -->
-
-	<!-- Main content section -->
+	<header>
+		<nav>
+			<a href="https://www.linkedin.com/in/david-foux"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/51-linkedin-512.png" alt="LinkedIn"></a>
+			<a href="https://www.instagram.com/david.foux/"><img src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Instagram-512.png" alt="Instagram"></a>
+		</nav>
+	</header>
 	<main>
-		<section id="about">
-			<h2>About Me</h2>
-			<p>Insert some text about yourself here.</p>
+		<section class="profile">
+			<img src="Images/Myself.jpg" alt="Profile Picture">
+			<div>
+				<h1>David Foux</h1>
+				<p>looking for a job in the full stack developing</p>
+				<button>Download Resume</button>
+			</div>
 		</section>
-
-		<section id="projects">
+		<section class="skills">
+			<h2>Skills</h2>
+			<ul>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>python</li>
+				<li>C</li>
+				<li>C++</li>
+				<li>C#</li>
+			</ul>
+		</section>
+		<section class="education">
+			<h2>Education</h2>
+			<ul>
+				<li>In the middle of my b.sc in computer science and in the middle to be a full stack developer </li>
+			</ul>
+		</section>
+		<section class="projects">
 			<h2>Projects</h2>
-			<!-- Insert some content about your projects here -->
+			<ul>
+				<li><a href="#">Project 1</a></li>
+				<li><a href="#">Project 2</a></li>
+				<li><a href="#">Project 3</a></li>
+				<li><a href="#">Project 4</a></li>
+				<li><a href="#">Project 5</a></li>
+			</ul>
 		</section>
-
-		<section id="contact">
-			<h2>Contact Me</h2>
-			<!-- Insert a contact form or contact information here -->
+		<section class="contact">
+			<h2>Contact</h2>
+			<form action="submit-form-url" method="POST">
+				<label for="name">Name</label>
+				<input type="text" id="name" name="name">
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email">
+				<label for="message">Message</label>
+				<textarea id="message" name="message"></textarea>
+				<button type="submit">Send Message</button>
+			</form>
 		</section>
 	</main>
-
-	<!-- Footer section -->
-	<footer>
-		<p>Copyright &copy; 2023 My Portfolio</p>
-	</footer>
-	<!-- Include JavaScript files here -->
-	<script src="script.js"></script>
 </body>
 </html>
