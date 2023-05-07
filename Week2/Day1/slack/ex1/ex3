@@ -1,0 +1,3 @@
+first_name = "david"
+last_name = "foux"
+print("My name is", first_name, last_name)
