@@ -1,9 +1,13 @@
 def draw_board(board):
-    print(board[0] + "|" + board[1] + "|" + board[2])
-    print("-+-+-")
-    print(board[3] + "|" + board[4] + "|" + board[5])
-    print("-+-+-")
-    print(board[6] + "|" + board[7] + "|" + board[8])
+    print("TIC TAC TOE")
+    print("***************")
+    print("*  " + board[0] + " | " + board[1] + " | " + board[2] + "  *")
+    print("* ----------  *")
+    print("*  " + board[3] + " | " + board[4] + " | " + board[5] + "  *")
+    print("* ----------  *")
+    print("*  " + board[6] + " | " + board[7] + " | " + board[8] + "  *")
+    print("***************")
+
 
 def check_winner(board):
     # check rows
@@ -38,9 +42,10 @@ def play_game():
     while not winner:
         draw_board(board)
 
-        move = input(f"Player {current_player}, enter a move (1-9): ")
+        row = input(f"Player {current_player}, enter a row (1-3): ")
+        col = input(f"Player {current_player}, enter a column (1-3): ")
 
-        index = int(move) - 1
+        index = (int(row)-1) * 3 + (int(col)-1)
         if board[index] == ' ':
             board[index] = current_player
             winner = check_winner(board)
@@ -55,5 +60,5 @@ def play_game():
     else:
         print(f"Player {winner} wins!")
 
-
+print("welcome to tic tac toe!\n")
 play_game()
