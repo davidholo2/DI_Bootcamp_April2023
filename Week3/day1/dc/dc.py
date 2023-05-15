@@ -50,20 +50,24 @@ class Farm:
 
     def get_short_info(self):
         animal_types = self.get_animal_types()
-        if len(animal_types) == 1:
-            animal_str = animal_types[0]
-        elif len(animal_types) == 2:
-            animal_str = " and ".join(animal_types)
-        else:
-            animal_str = ", ".join(
-                animal_types[:-1]) + f", and {animal_types[-1]}"
+        animal_str = ""
+        for i, animal_type in enumerate(animal_types):
+            quantity = self.animals[animal_type]
+            if quantity == 1:
+                animal_str += animal_type
+            else:
+                animal_str += f"{animal_type}s"
+            if i < len(animal_types) - 2:
+                animal_str += ", "
+            elif i == len(animal_types) - 2:
+                animal_str += ", and "
         return f"{self.name}'s farm has {animal_str}."
 
 
 macdonald = Farm("McDonald")
 macdonald.add_animal('cow', 5)
 macdonald.add_animal('sheep')
-macdonald.add_animal('sheep')
+
 macdonald.add_animal('goat', 12)
 animal_types = macdonald.get_animal_types()
 print(animal_types)
