@@ -13,7 +13,7 @@ class Farm:
         info = f"{self.name}'s farm\n\n"
         for animal, count in self.animals.items():
             info += f"{animal}: {count}\n"
-        info += "\n     E-I-E-I-0!"
+        info += "\n\tE-I-E-I-0!"
         return info
 
 
