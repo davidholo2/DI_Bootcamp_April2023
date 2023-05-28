@@ -2,7 +2,7 @@ import random
 
 
 def guess(num):
-    random_num = random.randint(1, 5)
+    random_num = random.randint(1, 100)
     return (num == random_num)
 
 

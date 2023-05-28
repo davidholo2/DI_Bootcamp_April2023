@@ -7,6 +7,3 @@ print("Maximum number in the list:", max(numbers))
 
 # use sum() to calculate the sum of the numbers in the list
 print("Sum of numbers in the list:", sum(numbers))
-
-for number in numbers:
-    print(number)

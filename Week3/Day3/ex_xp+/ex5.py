@@ -13,5 +13,4 @@ def time_until_january_1st():
         f"The 1st of January is in {days} days, {hours:02}:{minutes:02}:{seconds:02} hours.")
 
 
-# Call the function
 time_until_january_1st()

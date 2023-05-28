@@ -1,13 +1,13 @@
-#ex1
-num=int(input("enter a number:"))
-length=int(input("enter the length:"))
-list=[]
-for i in range(1,(length+1)):
+# ex1
+num = int(input("enter a number:"))
+length = int(input("enter the length:"))
+list = []
+for i in range(1, (length+1)):
     list.append(num*i)
 
 print(list)
 
-#ex2
+# ex2
 user_input = input("Enter a string: ")
 output = user_input[0]
 

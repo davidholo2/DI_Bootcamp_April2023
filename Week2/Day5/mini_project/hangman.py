@@ -1,6 +1,7 @@
 import random
 
-wordslist = ['correction', 'childish', 'beach', 'python', 'assertive', 'interference', 'complete', 'share', 'credit card', 'rush', 'south']
+wordslist = ['correction', 'childish', 'beach', 'python', 'assertive',
+             'interference', 'complete', 'share', 'credit card', 'rush', 'south']
 word = random.choice(wordslist)
 word_length = len(word)
 print("The word has", word_length, "letters")
@@ -57,6 +58,7 @@ while True:
             print("  O  ")
         elif body_parts == 2:
             print("  O  ")
+
             print("  |  ")
         elif body_parts == 3:
             print("  O  ")
@@ -72,4 +74,3 @@ while True:
             print("  O  ")
             print(" /|\\ ")
             print(" / \\ ")
-

@@ -26,14 +26,8 @@ members = [
     {'name': 'Sarah', 'age': 32, 'gender': 'Female', 'is_child': False}
 ]
 my_family = Family(members, 'Smith')
-
-# Test the born method
 my_family.born(name='John', age=0, gender='Male')
 print(my_family.members)
-
-# Test the is_18 method
 print(my_family.is_18('Michael'))
 print(my_family.is_18('John'))
-
-# Test the family_presentation method
 my_family.family_presentation()
