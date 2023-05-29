@@ -1,0 +1,6 @@
+<h1>Animals List</h1>
+<ul>
+  {% for animal in animals %}
+  <li><a href="/animal/{{ animal.id }}/">{{ animal }}</a></li>
+  {% endfor %}
+</ul>
