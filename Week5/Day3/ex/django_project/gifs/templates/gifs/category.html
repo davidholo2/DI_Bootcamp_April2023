@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ category.name }}</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'homepage' %}">Homepage</a>
+        <a href="{% url 'add_gif' %}">Add new GIF</a>
+        <a href="{% url 'categories' %}">Categories</a>
+    </nav>
+    <h1>{{ category.name }}</h1>
+    {% for gif in gifs %}
+        <img src="{{ gif.url }}" alt="{{ gif.title }}">
+    {% endfor %}
+</body>
+</html>
