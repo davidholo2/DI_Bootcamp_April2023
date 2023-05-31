@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo List</title>
+</head>
+<body>
+    <h1>Todo List</h1>
+    {% for todo in todos %}
+        <div>
+            <h2>{{ todo.title }}</h2>
+            <p>Details: {{ todo.details }}</p>
+            <p>Date Creation: {{ todo.date_creation }}</p>
+            <p>Deadline Date: {{ todo.deadline_date }}</p>
+            <p>Category: {{ todo.category }}</p>
+            <form method="POST" action="{% url 'mark_done' todo.id %}">
+                {% csrf_token %}
+                <input type="submit" value="Done">
+            </form>
+        </div>
+        <br>
+    {% endfor %}
+</body>
+</html>
