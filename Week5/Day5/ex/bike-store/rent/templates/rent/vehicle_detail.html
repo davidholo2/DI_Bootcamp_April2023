@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Vehicle Detail</h1>
+  <div>
+    <h2>{{ vehicle }}</h2>
+    <p>Type: {{ vehicle.type }}</p>
+    <p>Size: {{ vehicle.size }}</p>
+    <p>Real Cost: {{ vehicle.real_cost }}</p>
+  </div>
+{% endblock %}

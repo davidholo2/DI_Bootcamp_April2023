@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Add Customer</h1>
+  <form method="POST" action="{% url 'rent:customer_add' %}">
+    {% csrf_token %}
+    <label for="first_name">First Name:</label>
+    <input type="text" name="first_name" id="first_name">
+    <br>
+    <label for="last_name">Last Name:</label>
+    <input type="text" name="last_name" id="last_name">
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email">
+    <br>
+    <label for="phone_number">Phone Number:</label>
+    <input type="text" name="phone_number" id="phone_number">
+    <br>
+    <label for="address">Address:</label>
+    <input type="text" name="address" id="address">
+    <br>
+    <label for="city">City:</label>
+    <input type="text" name="city" id="city">
+    <br>
+    <label for="country">Country:</label>
+    <input type="text" name="country" id="country">
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Add Vehicle</h1>
+  <form method="POST" action="{% url 'rent:vehicle_add' %}">
+    {% csrf_token %}
+    <label for="type">Type:</label>
+    <input type="text" name="type" id="type">
+    <br>
+    <label for="size">Size:</label>
+    <input type="text" name="size" id="size">
+    <br>
+    <label for="real_cost">Real Cost:</label>
+    <input type="text" name="real_cost" id="real_cost">
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Rental List</h1>
+  {% for rental in rentals %}
+    <div>
+      <h2>Rental {{ rental.pk }}</h2>
+      <p>Customer: {{ rental.customer }}</p>
+      <p>Vehicle: {{ rental.vehicle }}</p>
+      <p>Rental Date: {{ rental.rental_date }}</p>
+      <p>Return Date: {{ rental.return_date }}</p>
+    </div>
+  {% empty %}
+    <p>No rentals found.</p>
+  {% endfor %}
+{% endblock %}

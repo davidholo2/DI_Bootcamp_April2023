@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Add Rental</h1>
+  <form method="POST" action="{% url 'rent:rental_add' %}">
+    {% csrf_token %}
+    <label for="customer">Customer:</label>
+    <select name="customer" id="customer">
+      {% for customer in customers %}
+        <option value="{{ customer.pk }}">{{ customer }}</option>
+      {% endfor %}
+    </select>
+    <br>
+    <label for="vehicle">Vehicle:</label>
+    <select name="vehicle" id="vehicle">
+      {% for vehicle in vehicles %}
+        <option value="{{ vehicle.pk }}">{{ vehicle }}</option>
+      {% endfor %}
+    </select>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+{% endblock %}
