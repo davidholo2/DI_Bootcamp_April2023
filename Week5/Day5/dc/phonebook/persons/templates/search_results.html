@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Search Results</h1>
+  {% if persons %}
+    <ul>
+      {% for person in persons %}
+        <li>{{ person.name }} - {{ person.phone_number }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No results found</p>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Search by Phone Number</h1>
+  <form method="POST" action="{% url 'persons:search_by_phonenumber' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Search</button>
+  </form>
+{% endblock %}
