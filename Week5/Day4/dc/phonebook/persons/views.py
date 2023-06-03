@@ -17,18 +17,3 @@ def search_person(request):
 def search_results(request, search_query):
     persons = Person.objects.filter(name__icontains=search_query)
     return render(request, 'persons/search_results.html', {'persons': persons})
-
-
-def search_by_name(request):
-    if request.method == 'POST':
-        form = SearchForm(request.POST)
-        if form.is_valid():
-            name = form.cleaned_data['name']
-            # Perform search logic using the name
-            # ...
-            # Render the search results
-            return render(request, 'search_results.html', {'results': results})
-    else:
-        form = SearchForm()
-
-    return render(request, 'search.html', {'form': form})
