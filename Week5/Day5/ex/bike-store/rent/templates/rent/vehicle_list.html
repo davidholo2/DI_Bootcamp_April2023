@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Vehicle List</h1>
+  <h2>Bikes:</h2>
+  {% for bike in bikes %}
+    <div>
+      <h3>{{ bike }}</h3>
+      <p>Type: {{ bike.type }}</p>
+      <p>Size: {{ bike.size }}</p>
+      <p>Real Cost: {{ bike.real_cost }}</p>
+    </div>
+  {% empty %}
+    <p>No bikes found.</p>
+  {% endfor %}
+  <h2>Scooters:</h2>
+  {% for scooter in scooters %}
+    <div>
+      <h3>{{ scooter }}</h3>
+      <p>Type: {{ scooter.type }}</p>
+      <p>Size: {{ scooter.size }}</p>
+      <p>Real Cost: {{ scooter.real_cost }}</p>
+    </div>
+  {% empty %}
+    <p>No scooters found.</p>
+  {% endfor %}
+{% endblock %}
