@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% include 'partials/navbar.html' %}
+
+    <div class="container mt-5">
+        <div class="row">
+            {% for film in films %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ film.title }}</h5>
+                            <p class="card-text">Release Date: {{ film.release_date|date:"F d, Y" }}</p>
+                            <p class="card-text">Nationality: {{ film.created_in_country }}</p>
+                            <p class="card-text">Categories: {{ film.category.all|join:", " }}</p>
+                            <p class="card-text">Directors: {{ film.director.all|join:", " }}</p>
+                            {% if user.is_authenticated %}
+                                {% if film in user.favorite_films.all %}
+                                    <a href="{% url 'films:favourite_film' film.id %}" class="btn btn-warning">Remove from Favorites</a>
+                                {% else %}
+                                    <a href="{% url 'films:favourite_film' film.id %}" class="btn btn-primary">Add to Favorites</a>
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
