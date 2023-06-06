@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% include 'partials/navbar.html' %}
+
+    <div class="container mt-5">
+        <h1>Profile</h1>
+        <p>Username: {{ user.username }}</p>
+        <p>First Name: {{ user.first_name }}</p>
+        <p>Last Name: {{ user.last_name }}</p>
+    </div>
+{% endblock %}
