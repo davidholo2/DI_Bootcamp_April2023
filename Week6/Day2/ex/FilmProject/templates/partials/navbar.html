@@ -1,21 +1,34 @@
-<!-- partials/navbar.html -->
-
-{% load static %}
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">FilmProject</a>
+    <a class="navbar-brand" href="#">Film Project</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'addFilm' %}">Add Film</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'addDirector' %}">Add Director</a>
-            </li>
+            {% if user.is_authenticated %}
+                {% if user.is_superuser %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'films:add_film' %}">Add Film</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'films:add_director' %}">Add Director</a>
+                    </li>
+                {% endif %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'accounts:logout' %}">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'accounts:profile' user.id %}">Profile</a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'accounts:login' %}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'accounts:signup' %}">Sign Up</a>
+                </li>
+            {% endif %}
         </ul>
     </div>
 </nav>

@@ -1,6 +1,7 @@
 from django.urls import path
 from .views import FilmDeleteView
 from .views import FavouriteFilmView
+from .views import FilmDetailView
 
 app_name = 'films'
 
