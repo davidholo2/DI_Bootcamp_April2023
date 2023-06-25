@@ -1,0 +1,8 @@
+/* CSS for bonus hover effects */
+#fade-paragraph {
+    transition: opacity 0.5s;
+}
+
+h1:hover {
+    font-size: 20px; /* Random pixel size will be set via JavaScript */
+}
