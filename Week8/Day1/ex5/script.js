@@ -1,21 +1,18 @@
 var element = document.getElementById("myElement");
 
-// Event listener for click event
+
 element.addEventListener("click", function() {
-    element.style.left = "50px"; // Change position x
+    element.style.left = "50px"; 
 });
 
-// Event listener for mouseover event
 element.addEventListener("mouseover", function() {
-    element.style.top = "50px"; // Change position y
+    element.style.top = "50px"; 
 });
 
-// Event listener for mouseout event
 element.addEventListener("mouseout", function() {
-    element.style.backgroundColor = "blue"; // Change color
+    element.style.backgroundColor = "blue"; 
 });
 
-// Event listener for double click event
 element.addEventListener("dblclick", function() {
-    element.style.fontSize = "24px"; // Change font size
+    element.style.fontSize = "24px";
 });
