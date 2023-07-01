@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Juice Bar</title>
+  <style>
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Juice Bar</h1>
+
+  <div>
+    <label for="size">Size:</label>
+    <select id="size">
+      <option value="small">Small</option>
+      <option value="medium">Medium</option>
+      <option value="large">Large</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="ingredient1">Ingredient 1:</label>
+    <input type="text" id="ingredient1">
+  </div>
+
+  <div>
+    <label for="ingredient2">Ingredient 2:</label>
+    <input type="text" id="ingredient2">
+  </div>
+
+  <div>
+    <label for="ingredient3">Ingredient 3:</label>
+    <input type="text" id="ingredient3">
+  </div>
+
+  <button onclick="makeJuice()">Make Juice</button>
+
+  <div id="output"></div>
+
+  <script src="ex8.js".js"></script>
+</body>
+</html>
