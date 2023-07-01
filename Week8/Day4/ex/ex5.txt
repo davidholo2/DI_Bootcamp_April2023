@@ -1,0 +1,5 @@
+
+The option that will successfully extend the Dog class is option 2:
+In this option, the super(name) statement is used to call the constructor of the Dog class and pass the name parameter.
+ This ensures that the name property of the Dog class is properly initialized. Additionally,
+ the size parameter is assigned to the size property of the Labrador class.

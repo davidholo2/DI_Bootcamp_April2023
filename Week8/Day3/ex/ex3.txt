@@ -1,0 +1,24 @@
+
+------1------
+The code defines two arrays fruits and vegetables with some elements. Then, it creates a new array result using the spread operator (...). It spreads the elements of vegetables and fruits within the new array along with additional elements 'bread' and 'chicken'. Finally, it logs the result array to the console.
+
+Output:
+['bread', 'carrot', 'potato', 'chicken', 'apple', 'orange']
+
+The output will be an array containing 'bread', followed by the elements of vegetables, then 'chicken', and finally, the elements of fruits.
+
+------2------
+The code defines a string variable country with the value "USA". Then, it uses the spread operator (...) to spread the characters of the country string within a new array. Finally, it logs the array to the console.
+
+Output:
+['U', 'S', 'A']
+
+The output will be an array containing individual characters of the string "USA", each as a separate element.
+
+------Bonus------
+The code creates a new variable newArray by spreading an empty array [,,] using the spread operator (...). Finally, it logs the newArray variable to the console.
+
+Output:
+[undefined, undefined]
+
+The output will be an array containing two undefined elements. The empty array [,,] has two empty slots, which are filled with undefined values when spread into newArray.

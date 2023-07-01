@@ -1,0 +1,50 @@
+[2] === [2] is False. Although the arrays have the same elements, 
+they are different objects in memory, so they are not considered equal when using the strict equality operator (===).
+
+{} === {} is False. Similar to the previous example,
+ these empty objects are different objects in memory, so they are not considered equal.
+
+For the objects:
+const object1 = { number: 5 };
+const object2 = object1;
+const object3 = object2;
+const object4 = { number: 5};
+
+
+[2] === [2] is False. Although the arrays have the same elements, they are different objects in memory, so they are not considered equal when using the strict equality operator (===).
+
+{} === {} is False. Similar to the previous example, these empty objects are different objects in memory, so they are not considered equal.
+
+For the objects:
+
+javascript
+Copy code
+const object1 = { number: 5 };
+const object2 = object1;
+const object3 = object2;
+const object4 = { number: 5};
+The value of object2.number and object3.number will be 4, while object4.number will be 5.
+
+This is because object1, object2, and object3 all reference the same object in memory. When object1.number is changed to 4, 
+it modifies the underlying object. Since object2 and object3 reference the same object, their number property is also updated. However,
+ object4 is a separate object with its own number property, which remains unchanged.
+
+example:
+class Animal {
+  constructor(name, type, color) {
+    this.name = name;
+    this.type = type;
+    this.color = color;
+  }
+}
+
+class Mammal extends Animal {
+  sound(sound) {
+    return `Moooo I'm a ${this.type}, named ${this.name} and I'm ${this.color} - ${sound}`;
+  }
+}
+
+const farmerCow = new Mammal("Lily", "cow", "brown and white");
+console.log(farmerCow.sound("moos"));
+Output: "Moooo I'm a cow, named Lily and I'm brown and white - moos"
+

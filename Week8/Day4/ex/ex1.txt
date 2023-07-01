@@ -1,0 +1,12 @@
+The output of the code will be:
+
+"I am John Doe from Vancouver, Canada. Latitude(49.2827), Longitude(-123.1207)"
+
+Explanation:
+The code declares an object person with various properties including name and location. It then uses destructuring assignment to extract specific values from the person object and assign them to variables name, country, city, lat, and lng.
+
+The name property is extracted directly from the person object.
+The country and city properties are extracted from the nested location object.
+The lat and lng values are extracted from the coordinates array within the location object.
+
+Finally, the console.log() statement uses template literals to display the extracted values in a formatted string.

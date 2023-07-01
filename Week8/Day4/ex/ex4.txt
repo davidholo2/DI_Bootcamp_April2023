@@ -1,0 +1,1 @@
+The code creates a new instance of the `Person` class and stores it in the `member` variable. The output will be `'object'` when logging the type of `member` to the console.
