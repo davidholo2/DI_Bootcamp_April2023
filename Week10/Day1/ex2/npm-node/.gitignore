@@ -1,0 +1,23 @@
+# Ignore node_modules folder and its content
+node_modules/
+
+# Ignore npm lock file
+package-lock.json
+
+# Ignore log files
+*.log
+
+# Ignore .env files containing sensitive data
+.env
+
+# Ignore IDE/Editor-specific files (e.g., for VSCode, IntelliJ, or Sublime Text)
+.vscode/
+.idea/
+*.sublime*
+
+# Ignore build outputs
+dist/
+build/
+*.exe
+*.dll
+*.jar
