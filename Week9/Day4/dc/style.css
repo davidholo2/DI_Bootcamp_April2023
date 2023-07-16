@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .converter-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  input[type="number"] {
+    width: 100px;
+    margin-left: 10px;
+  }
+  
+  .switch-button-container {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+  
+  #switchButton {
+    background-color: #ccc;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #convertButton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #resultContainer {
+    text-align: center;
+    font-size: 18px;
+  }
+  
