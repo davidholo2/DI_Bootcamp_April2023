@@ -1,0 +1,7 @@
+<div id="post-container">
+    <ol>
+        <% posts.forEach(post => { %>
+            <li><a href="<%= post.link %>"><%= post.title %></a></li>
+        <% }); %>
+        </ol>
+</div>
