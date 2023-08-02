@@ -1,0 +1,41 @@
+{
+    "SocialMedias": [
+      {
+        "name": "Facebook",
+        "link": "https://www.facebook.com"
+      },
+      {
+        "name": "Twitter",
+        "link": "https://www.twitter.com"
+      },
+      {
+        "name": "Instagram",
+        "link": "https://www.instagram.com"
+      }
+    ],
+    "Skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "HTML",
+      "CSS"
+    ],
+    "Experiences": [
+      {
+        "id": 1,
+        "title": "Web Developer",
+        "years": 3
+      },
+      {
+        "id": 2,
+        "title": "UI/UX Designer",
+        "years": 2
+      },
+      {
+        "id": 3,
+        "title": "Project Manager",
+        "years": 4
+      }
+    ]
+  }
+  
