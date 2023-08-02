@@ -1,0 +1,38 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+*.env
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Compiled output
+dist/
+build/
+
+# Dependency directories
+.pnp/
+.pnp.js
+
+# macOS
+.DS_Store
+
+# Log files
+*.log
+
+# OS generated files
+Thumbs.db
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# TypeScript
+*.tsbuildinfo
+
+# Cache
+.cache/
