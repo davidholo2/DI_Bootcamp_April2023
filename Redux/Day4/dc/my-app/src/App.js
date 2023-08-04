@@ -1,14 +1,24 @@
-// src/App.js
-
-import React from 'react';
-import ParentComponent from './ParentComponent';
-import './App.css'; // You can create this CSS file for styling
+import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Post from "./components/Post";
 
 function App() {
   return (
-    <div className="app">
-      <ParentComponent />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/post/:post_id" component={Post} />
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 
